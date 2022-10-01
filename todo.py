@@ -1,6 +1,6 @@
 #app.py
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 #app instance
 app = Flask(__name__)
 
@@ -12,9 +12,11 @@ app = Flask(__name__)
 def hello():
     return render_template('home.html')
 
-@app.route('/addTodo', method=['POST'])
+@app.route('/addTodo', methods=['POST'])
 def addTodo():
-    #access body info
+   todoItem = request.form['text1']
+   print(text1)
+   return(text1)
 
 
 #runs python app
