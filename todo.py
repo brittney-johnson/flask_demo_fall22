@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 #app instance
 app = Flask(__name__)
 
-
+todoList = []
 
 
 #app goes to "/"
@@ -15,8 +15,8 @@ def hello():
 @app.route('/addTodo', methods=['POST'])
 def addTodo():
    todoItem = request.form['text1']
-   print(text1)
-   return(text1)
+   todoList.append(todoItem)
+   return render_template('home.html', todoList=todoList)
 
 
 #runs python app
