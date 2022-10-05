@@ -13,7 +13,7 @@
         $.ajax({
           url:"/addTodo", 
           type: "POST", 
-          data:{todoItem: $('#todoItem').val()}
+          data:{text1: $('#text1').val()}
         }).done(function(response){
           console.log(response)
         })
